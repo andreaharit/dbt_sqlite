@@ -1,0 +1,31 @@
+version: 2
+models:
+  - name: top_wines
+    description: Top 50 wines with the best average scores and then ordered by count
+      of reviews
+    columns:
+      - name: name
+        description: Name of the wine
+        tests:
+          - unique
+          - not_null
+  - name: top_countries
+    description: Top 3 countries with the most users
+    columns:
+      - name: code
+        description: Country code
+        tests:
+          - unique
+          - accepted_values:
+              values:
+                - it
+                - fr
+                - us
+  - name: wines_invest
+    columns:
+      - name: wine
+        data_type: varchar
+        quote: true
+      - name: code
+        data_type: varchar
+        quote: true
