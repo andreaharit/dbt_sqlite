@@ -1,4 +1,4 @@
-test_01:
+test_01: # this yml is generate in a .dbt folder in your pc after dbt init, and you just need to adjust it for SQLite
   target: dev
   outputs:
     dev:
@@ -7,5 +7,5 @@ test_01:
       database: <raw>
       schema: 'main'
       schemas_and_paths:
-        main: "C:/Users/User_name/Desktop/ARAI/DBT/databases/raw.db" 
-      schema_directory: "C:/Users/User_name/Desktop/ARAI/DBT/databases"
+        main: "C:/Users/User_name/Desktop/ARAI/DBT/databases/raw.db" # change here to your own path!
+      schema_directory: "C:/Users/User_name/Desktop/ARAI/DBT/databases" # change here to your own path!
